@@ -1,0 +1,40 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix;
+
+.p-header-left {
+  .c-header-logo {
+    padding-top: 9px;
+    padding-left: 10px;
+  }
+  .c-header-phrase {
+    h1 {
+      display: none;
+    }
+  }
+  @include mix.mq(pc_s) {
+    .c-header-logo {
+      display: flex;
+      width: 160px;
+      padding: 0 0 0 21px;
+      a {
+        height: 70px;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+  @include mix.mq(pc_l) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .c-header-phrase {
+      h1 {
+        display: block;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 900;
+        padding-left: 30px;
+        text-align: justify;
+      }
+    }
+  }
+ }

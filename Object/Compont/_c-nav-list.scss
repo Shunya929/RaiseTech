@@ -1,0 +1,78 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+
+$btnWidth: 23px;
+$btnHeight: 2px;
+@mixin pseudo {
+  display: none;
+  position: absolute;
+  right: 23px;
+  top: 22.5px;
+  content: "";
+  height: $btnHeight;
+  width: $btnWidth;
+  background-color: black;
+}
+
+.p-header-right.is-open {
+  ul.c-nav {
+    li.c-nav-list {
+      position: relative;
+      h2.c-menu-list {
+        text-align: left;
+        padding: 10px;
+        &::before{
+          @include pseudo();
+          display: block;
+          transform: rotate(+90deg);
+        }
+        &::after {
+          @include pseudo();
+          display: block;
+          transform: rotate(180deg);
+        }
+        &:hover {
+          background-color: #F2FAFB;
+        }
+      }
+      h2.no-pseudo::before {
+        display: none;
+      }
+      h2.no-pseudo::after {
+        display: none;
+      }
+      ul.c-submenu {
+        display: none;
+        margin: 0;
+        padding: 0;
+        li {
+          position: relative;
+          width: 100%;
+          padding: 15px;
+          padding-left: 30px;
+          text-align: left;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 27px;
+          &:hover {
+            background-color: #F2FAFB;
+          }
+        }
+      }
+    }
+    
+    li.c-nav-list.is-hover {
+      h2::before {
+        top: -2px;
+        right: 10px;
+        height: 50px;
+        width: 50px;
+        background-color: #F7F7F7;
+      }
+    }
+  }
+  a {
+    width: 100%;
+    height: 100%;
+  }
+}
+

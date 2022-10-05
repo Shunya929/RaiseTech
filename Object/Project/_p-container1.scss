@@ -1,0 +1,17 @@
+//p.container1
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+
+.p-container1 {
+  background-image: 
+  url(../img/RaiseTech模写課題image2.png);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  @include mix.mq(tab_s) {
+    height: 680px;
+  }
+}
+

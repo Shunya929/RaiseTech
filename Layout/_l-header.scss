@@ -1,0 +1,16 @@
+@use '../Foundation/mixin' as mix; 
+
+.l-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: 50px;
+  background-color: #fff;
+  @include mix.mq(pc_s) {
+    height: 70px;
+  }
+}

@@ -1,0 +1,7 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+.l-main {
+  overflow-y: hidden;
+  @include mix.mq(tab_s) {
+    position: relative;
+  }
+}

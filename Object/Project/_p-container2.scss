@@ -1,0 +1,51 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+
+
+ .p-container2 {
+  transition: .2s;
+  background-color: #fff;
+  height: 155px;
+  h2{
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 700;
+    padding-top: 15px;
+   }
+   a {
+    transition: .5s;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #2498B3;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    height: 40px;
+    padding: 12px 15px;
+    margin-top: 15px;
+   }
+   @include mix.mq(tab_s) {
+    height: 328px;
+    width: 412px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 10px;
+    z-index: 30;
+    h2 {
+      font-size: 16px;
+      line-height: 27px;
+      margin: 15px auto;
+    }
+    a {
+      width: 290px;
+      height: 68px;
+      font-size: 18px;
+      line-height: 18px;
+      padding-top: 25px;
+    }
+  }
+}

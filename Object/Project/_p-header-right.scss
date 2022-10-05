@@ -1,0 +1,112 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+
+.p-header-right {
+  .nav-menu {
+    display: none;
+    ul.c-nav {
+      // display: none;
+      font-size: 12px;
+      font-weight: 100;
+      line-height: 27px;
+      li.c-nav-list {
+        //  display: none;
+        h2.c-menu-list {
+          display: none;
+        }
+      }
+    }
+  }
+  @include mix.mq(pc_s) {
+    .nav-menu {
+      display: block;
+      ul.c-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        position: relative;
+        li.c-nav-list {
+          display: block;
+          height: 70px; 
+          padding-top: 20px;
+          h2.c-menu-list {
+            display: block;
+            height: 100%;
+            padding: 0 10px;
+          }
+          ul.c-submenu {
+            display: none;
+            width: auto;
+            position: absolute;
+            background-color: #E9F7FA;
+            li {
+              text-align: left;
+              font-size: 16px;
+              line-height: 27px;
+              font-weight: 500;
+              a {
+                height: 65px;
+                padding-top: 22px;
+                padding-left: 20px;
+                padding-right: 40px;
+              }
+              a:hover {
+                color: #46A4BC;
+                background-color: white;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .c-nav-list:hover {
+          background-color: #D4F1F8;
+        }
+        li.c-header-application-for-class {
+          display: block;
+          font-size: 16px;
+          line-height: 27px;
+          font-weight: 700;
+          a {
+            color: white;
+            background-color: #2498B3;
+            height: 70px;
+            padding-top: 22px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .c-header-application-for-class {
+    display: none;
+  }
+}
+
+
+.p-header-right.is-open {
+  .p-nav {
+    position: relative;
+    width: 100vw;
+    right: 145px;
+    .p-header-menu {
+      position: relative;
+      overflow: hidden;
+      ul.c-nav  {
+        // display: block;
+        position: relative;
+        padding-top: 50px;
+        margin: 0;
+        li.c-nav-list {
+          //  display: block;
+          h2.c-menu-list {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,80 @@
+@use '/Users/shunya/raisetech模写課題/Foundation/_mixin.scss' as mix; 
+
+ .p-container3 {
+  height: auto;
+  background-color: black;
+  color: #fff;
+  ul {
+    padding-bottom: 50px;
+    li {
+      padding-top: 60px;
+      #icon1::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f44b";
+        font-weight: 900;
+        font-size: 110px;
+        -webkit-text-stroke: 8px black; 
+        line-height: 2;
+      }
+      #icon2::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f201";
+        font-weight: 900;
+        font-size: 110px;
+        -webkit-text-stroke: 8px black; 
+        line-height: 2;
+      }
+      #icon3::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f1cd";
+        font-weight: 900;
+        font-size: 110px;
+        -webkit-text-stroke: 8px black; 
+        line-height: 2;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 41px;
+        margin: 10px auto;
+       }
+       p {
+         font-size: 16px;
+         font-weight: 700;
+         line-height: 27px;
+         margin: 0 auto;
+         padding-left: 20px;
+         padding-right: 20px;
+       }
+     }
+   }
+   @include mix.mq(tab_s) {
+    position: relative;
+    height: 260px;
+      li {
+        padding: 0;
+        display: inline-block;
+        vertical-align: top;
+        width: calc(30% + 20px);
+        position: relative;
+        top: -240px;
+        z-index: 30;
+        p {
+          width: 90%;
+          margin: 0 auto;
+        }
+      }
+   }
+   @include mix.mq(tab_l) {
+    li {
+      width: calc(25% + 20px);
+    }
+   }
+
+   @include mix.mq(pc_s) {
+    ul {
+      max-width: 1078px;
+      margin: 0 auto;
+    }
+   }
+ }
